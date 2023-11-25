@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="image-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb682d4b-ca24-4e20-a3b1-f38da5d6a596?apiKey=94a6449fd86a4acd9dd45ac2c2bf0dcf&" class="img" alt="Background Image">
+            <div class="description">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e292c3b3-c53b-41b7-823a-2a30a08ab8a0?apiKey=94a6449fd86a4acd9dd45ac2c2bf0dcf&" class="img-2" alt="Logo">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <img src="https://cdn.builde    r.io/api/v1/image/assets/TEMP/9e050a23-7d73-4297-ae1d-1b5693f2d5b7?apiKey=94a6449fd86a4acd9dd45ac2c2bf0dcf&" class="img-3" alt="Email Icon">
+                        <input type="email" placeholder="Email" id="adminEmail" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f754b15f-17b4-4e67-8cf3-f10d5c3fa007?apiKey=94a6449fd86a4acd9dd45ac2c2bf0dcf&" class="img-4" alt="Password Icon">
+                        <input type="password" placeholder="Password" id="adminPassword" required>
+                    </div>
+                </div>
+                <a href="reg.html" target="_blank">LOGIN</a>
+                <div class="not-registered">Not Registered?</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            var email = document.getElementById('adminEmail').value;
+            var password = document.getElementById('adminPassword').value;
+
+            
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Invalid email address');
+                return false;
+            }
+
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+            if (!passwordRegex.test(password)) {
+                alert('Invalid password. It must be 8-15 characters, contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+                return false;
+            }
+
+            alert('Login successful!');
+        }
+    </script>
+</body>
+
+</html>
